@@ -22,7 +22,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">SketchMap</h3>
+  <h3 align="center">SketchMath</h3>
 
   <p align="center">
      A photomath alternative.
@@ -49,7 +49,8 @@ This was a personal project I embarked on. The idea came from the desire to test
 
 ### Features
 * Offers the fully integrated QuickPaint software (self made drawing application)
-* Creates a Nueral network and performs deep learing handwriting recognition of user drawn digits.
+* Creates a Nueral network and performs deep learning handwriting recognition of user drawn digits.
+* Utilizes MNIST digit classification
 * Can perform and output mathematical computations on 2 user drawn numbers.
 
 [![Product Name Screen Shot][product-screenshot2]]
@@ -81,7 +82,7 @@ git clone https://github.com/dylansloann/SketchMath
 
 3. Install modules in Built With
 
-3. Run antivirus.py
+3. Run main.py
 
 
 <!-- CONTRIBUTING -->
