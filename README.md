@@ -22,7 +22,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">SketchMap</h3>
+  <h3 align="center">SketchMath</h3>
 
   <p align="center">
      A photomath alternative.
