@@ -75,7 +75,7 @@ To test out program follow steps
 
 1. Clone the repo
 ```sh
-git clone https://github.com/dylansloann/Antihax.git
+git clone https://github.com/dylansloann/SketchMath
 ```
 2. Extract Files
 
@@ -104,7 +104,7 @@ Name - Dylan Sloan (TAMU '23)
 
 Email - dylansloann2@gmail.com
 
-Project Link: [https://github.com/dylansloann/Antihax](https://github.com/dylansloann/Antihax)
+Project Link: [https://github.com/dylansloann/SketchMath](https://github.com/dylansloann/SketchMath)
 
 
 
