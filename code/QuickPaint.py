@@ -108,7 +108,7 @@ class Second(QMainWindow):
   
     # designation of menu bar commands
     def save(self): 
-        file_path = QFileDialog.getSaveFileName(self, "Save Image", "", "PNG(*.png);;JPEG(*.jpg *.jpeg);;All Files(*.*) ")
+        file_path = QFileDialog.getSaveFileName(self, "Save Image", "", "PNG;;JPG;;All_Files")
         if file_path[0] == "": 
             return
         self.image.save(file_path[0]) 
