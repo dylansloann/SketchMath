@@ -82,7 +82,7 @@ git clone https://github.com/dylansloann/SketchMath
 
 3. Install modules in Built With
 
-3. Run antivirus.py
+3. Run main.py
 
 
 <!-- CONTRIBUTING -->
