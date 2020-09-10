@@ -49,7 +49,8 @@ This was a personal project I embarked on. The idea came from the desire to test
 
 ### Features
 * Offers the fully integrated QuickPaint software (self made drawing application)
-* Creates a Nueral network and performs deep learing handwriting recognition of user drawn digits.
+* Creates a Nueral network and performs deep learning handwriting recognition of user drawn digits.
+* Utilizes MNIST digit classification
 * Can perform and output mathematical computations on 2 user drawn numbers.
 
 [![Product Name Screen Shot][product-screenshot2]]
