@@ -47,7 +47,6 @@ class Ui_MainWindow(object):
         font.setFamily("Beckman Free")
         font.setPointSize(14)
         self.addButton.setFont(font)
-        # self.addButton.setStyleSheet("background-color: transparent")
         self.addButton.setObjectName("addButton")
         self.addButton.clicked.connect(self.addOp)
 
