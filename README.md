@@ -45,7 +45,7 @@
 
 [![Product Name Screen Shot][product-screenshot]]
 
-This was a personal project I embarked on. The idea came from the desire to test of deep learning. It was a lot of fun to make and hope yall like it. :)
+This was a personal project I embarked on. The idea came from the desire to test out deep learning. It was a lot of fun to make and hope yall like it. :)
 
 ### Features
 * Offers the fully integrated QuickPaint software (self made drawing application)
