@@ -21,8 +21,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/dylansloann/Antihax">
-    <img src="code/logo2.png" alt="Logo" width="200" height="200">
+  <a href="https://github.com/dylansloann/SketchMath">
+    <img src="code/logo.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">SketchMath</h3>
