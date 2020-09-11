@@ -22,7 +22,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/dylansloann/SketchMath">
-    <img src="code/logo.png" alt="Logo" width="200" height="200">
+    <img src="images/logo.png" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">SketchMath</h3>
