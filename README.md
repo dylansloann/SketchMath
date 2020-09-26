@@ -90,9 +90,5 @@ Email - dylansloann2@gmail.com
 
 Project Link: [https://github.com/dylansloann/SketchMath](https://github.com/dylansloann/SketchMath)
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: images/showcase1.png
 [product-screenshot2]: images/showcase2.png
