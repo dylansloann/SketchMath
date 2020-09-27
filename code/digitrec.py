@@ -10,7 +10,6 @@ def Compiler():
 
     # converts pixels to float for better reconigtion
     training_data = training_data / 255
-    test_data = test_data / 255
 
     # biulds neural network with input and essentially leading to probability of a the possible 10 digits to be output
     mod = tf.keras.Sequential([tf.keras.layers.Flatten(input_shape=(28, 28)), tf.keras.layers.Dense(128, activation=tf.nn.relu), tf.keras.layers.Dense(10, activation=tf.nn.softmax)])
