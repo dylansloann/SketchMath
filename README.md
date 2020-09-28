@@ -1,24 +1,4 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-<!-- PROJECT LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/dylansloann/SketchMath">
@@ -48,7 +28,7 @@
 
 [![Product Name Screen Shot][product-screenshot]]
 
-This was a personal project I embarked on. The idea came from the desire to test out deep learning. It was a lot of fun to make and hope yall like it. :)
+This was a personal project I embarked on. The idea came from the desire to test out deep learning. Inspiration for the digit recogintion was from various sources. It was a lot of fun to make and hope yall like it. :)
 
 ### Features
 * Offers the fully integrated QuickPaint software (self made drawing application)
@@ -110,9 +90,5 @@ Email - dylansloann2@gmail.com
 
 Project Link: [https://github.com/dylansloann/SketchMath](https://github.com/dylansloann/SketchMath)
 
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [product-screenshot]: images/showcase1.png
 [product-screenshot2]: images/showcase2.png
