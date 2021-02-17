@@ -51,7 +51,7 @@ This includes the main languages/modules that were used.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Info on if you want to give the software a shot.
+Info on if you want to give it a shot.
 
 ### Running/Installation
 
