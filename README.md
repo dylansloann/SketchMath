@@ -60,25 +60,10 @@ To test out program follow steps
 1. Clone the repo
 ```sh
 git clone https://github.com/dylansloann/SketchMath
-```
-2. Extract Files
-
-3. Install modules in Built With
+``
+2. Install modules in Built With
 
 3. Run main.py
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are **greatly appreciated**. Would love to take this software even further.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/coolfeature`)
-3. Commit your Changes (`git commit -m 'Add a feature'`)
-4. Push to the Branch (`git push origin feature/coolfeature`)
-5. Open a Pull Request
-
 
 
 <!-- CONTACT -->
