@@ -60,7 +60,7 @@ To test out program follow steps
 1. Clone the repo
 ```sh
 git clone https://github.com/dylansloann/SketchMath
-``
+```
 2. Install modules in Built With
 
 3. Run main.py
