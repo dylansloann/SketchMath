@@ -26,7 +26,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+![Product Name Screen Shot][product-screenshot]
 
 This was a personal project I embarked on. The idea came from the desire to test out deep learning. Inspiration for the digit recogintion was from various sources. It was a lot of fun to make and hope yall like it. :) 
 
@@ -36,7 +36,7 @@ This was a personal project I embarked on. The idea came from the desire to test
 * Utilizes MNIST digit classification
 * Can perform and output mathematical computations on 2 user drawn numbers.
 
-[![Product Name Screen Shot][product-screenshot2]]
+![Product Name Screen Shot][product-screenshot2]
 
 ### Built With
 This includes the main languages/modules that were used.
