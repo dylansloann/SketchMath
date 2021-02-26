@@ -113,32 +113,24 @@ class Ui_MainWindow(object):
 
     # defines translate operation, computes 4 answers
     def translateOp(self):
-        test, test2 = makePred()
-        global sum_var
-        global diff_var
-        global prod_var
-        global quot_var
-        sum_op = test + test2
-        diff_op = test - test2 
-        prod_op = (test * test2) 
-        quot_op = (test / test2)
-        sum_var = str(sum_op)
-        diff_var = str(diff_op)
-        prod_var = str(prod_op)
-        quot_var = str(quot_op)
+        tmp1, tmp2 = makePred()
+        self.sum_op = str(tmp1 + tmp2)
+        self.diff_op = str(tmp1 - tmp2)
+        self.prod_op = str(tmp1 * tmp2) 
+        self.quot_op = str(tmp1 / tmp2)
 
     # pushes operations to text label
     def addOp(self):
-        self.label_2.setText(sum_var)
+        self.label_2.setText(self.sum_op)
 
     def subtrOp(self):
-        self.label_2.setText(diff_var)
+        self.label_2.setText(self.diff_op)
 
     def multOp(self):
-        self.label_2.setText(prod_var)
+        self.label_2.setText(self.prod_op)
 
     def divOp(self):
-        self.label_2.setText(quot_var)
+        self.label_2.setText(self.quot_op)
 
     # changes windows tiltle names
     def retranslateUi(self, MainWindow):
@@ -155,14 +147,15 @@ class Ui_MainWindow(object):
 
 # non member
 def stringToInt(l):
-        final = int(''.join(str(i) for i in l))
-        return final
+    final = int(''.join(str(i) for i in l))
+    return final
 
 # operation for making predication of digits, pulls in digitrec.py
 def makePred():
     num1 = []
     num2 = []
     model = Compiler()
+    
     final_image1 = imageGray('./test1.png')
     test1 = readNums(final_image1)
     for digit in test1:
