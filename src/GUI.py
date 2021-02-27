@@ -3,12 +3,16 @@ from digitrec import *
 from QuickPaint import *
 
 # setup of main window
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(626, 420)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
-        self.centralwidget.setObjectName("centralwidget")
+class MainGUI(QtWidgets.QWidget):
+    def __init__(self):
+        # initializes mainWindow
+        super().__init__()
+        self.setupUi()
+    
+    def setupUi(self):
+        self.resize(626, 420)
+        self.setObjectName("centralwidget")
+        self.setWindowTitle("SketchMath")
         self.backgroundSetup()
         self.tmpSetup()
         self.paintButtonSetup()
@@ -17,34 +21,31 @@ class Ui_MainWindow(object):
         self.multiplciationButtonSetup()
         self.divisionButtonSetup()
         self.translateButtonSetup()
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        self.show()
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.compile = CompileThread()
+        self.compile.start()
 
     def backgroundSetup(self):
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(0, 0, 631, 401))
-        self.label.setText("")
-        self.label.setPixmap(QtGui.QPixmap("background.png"))
-        self.label.setObjectName("label")
+        self.backgroundImage = QtWidgets.QLabel(self)
+        self.backgroundImage.setGeometry(QtCore.QRect(0, 0, 631, 401))
+        self.backgroundImage.setText("")
+        self.backgroundImage.setPixmap(QtGui.QPixmap("background.png"))
+        self.backgroundImage.setObjectName("backgroundImage")
 
     def tmpSetup(self):
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(280, 190, 61, 20))
+        self.answerLabel = QtWidgets.QLabel(self)
+        self.answerLabel.setGeometry(QtCore.QRect(280, 190, 61, 20))
         font = QtGui.QFont()
         font.setFamily("Beckman")
         font.setPointSize(11)
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet("Color : white")
-        self.label_2.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_2.setObjectName("label_2")
+        self.answerLabel.setFont(font)
+        self.answerLabel.setStyleSheet("Color : white")
+        self.answerLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.answerLabel.setObjectName("answerLabel")
 
     def paintButtonSetup(self):
-        self.paintButton = QtWidgets.QPushButton(self.centralwidget)
+        self.paintButton = QtWidgets.QPushButton(self)
         self.paintButton.setGeometry(QtCore.QRect(120, 250, 101, 61))
         font = QtGui.QFont()
         font.setFamily("Jokerman")
@@ -52,51 +53,56 @@ class Ui_MainWindow(object):
         self.paintButton.setFont(font)
         self.paintButton.setAutoFillBackground(False)
         self.paintButton.setObjectName("paintButton")
+        self.paintButton.setText("PUSH")
         self.paintButton.clicked.connect(self.openPaint)
         self.dialogs = list()
 
     def addButtonSetup(self):
-        self.addButton = QtWidgets.QPushButton(self.centralwidget)
+        self.addButton = QtWidgets.QPushButton(self)
         self.addButton.setGeometry(QtCore.QRect(415, 250, 41, 31))
         font = QtGui.QFont()
         font.setFamily("Beckman Free")
         font.setPointSize(14)
         self.addButton.setFont(font)
         self.addButton.setObjectName("addButton")
+        self.addButton.setText("+")
         self.addButton.clicked.connect(self.addOp)
 
     def subtractionButtonSetup(self):
-        self.subtrButton = QtWidgets.QPushButton(self.centralwidget)
+        self.subtrButton = QtWidgets.QPushButton(self)
         self.subtrButton.setGeometry(QtCore.QRect(465, 250, 41, 31))
         font = QtGui.QFont()
         font.setFamily("Beckman Free")
         font.setPointSize(16)
         self.subtrButton.setFont(font)
         self.subtrButton.setObjectName("subtrButton")
+        self.subtrButton.setText("-")
         self.subtrButton.clicked.connect(self.subtrOp)
 
     def multiplciationButtonSetup(self):
-        self.multButton = QtWidgets.QPushButton(self.centralwidget)
+        self.multButton = QtWidgets.QPushButton(self)
         self.multButton.setGeometry(QtCore.QRect(415, 285, 41, 31))
         font = QtGui.QFont()
         font.setFamily("Beckman Free")
         font.setPointSize(16)
         self.multButton.setFont(font)
         self.multButton.setObjectName("multButton")
+        self.multButton.setText("*")
         self.multButton.clicked.connect(self.multOp)
 
     def divisionButtonSetup(self):
-        self.divButton = QtWidgets.QPushButton(self.centralwidget)
+        self.divButton = QtWidgets.QPushButton(self)
         self.divButton.setGeometry(QtCore.QRect(465, 285, 41, 31))
         font = QtGui.QFont()
         font.setFamily("Beckman")
         font.setPointSize(16)
         self.divButton.setFont(font)
         self.divButton.setObjectName("divButton")
+        self.divButton.setText("/")
         self.divButton.clicked.connect(self.divOp)
 
     def translateButtonSetup(self):
-        self.translateButton = QtWidgets.QPushButton(self.centralwidget)
+        self.translateButton = QtWidgets.QPushButton(self)
         self.translateButton.setGeometry(QtCore.QRect(280, 270, 61, 20))
         font = QtGui.QFont()
         font.setFamily("Beckman Free")
@@ -104,68 +110,67 @@ class Ui_MainWindow(object):
         self.translateButton.setFont(font)
         self.translateButton.setStyleSheet("color: white; background-color: transparent")
         self.translateButton.setObjectName("translateButton")
+        self.translateButton.setText("Translate")
         self.translateButton.clicked.connect(self.translateOp)
 
     # defines paint button operations, redirects to QuickPaint.py
     def openPaint(self):
-        self.sub = Second()
+        self.sub = Paint()
         self.sub.show()
 
     # defines translate operation, computes 4 answers
     def translateOp(self):
-        tmp1, tmp2 = makePred()
-        self.sum_op = str(tmp1 + tmp2)
-        self.diff_op = str(tmp1 - tmp2)
-        self.prod_op = str(tmp1 * tmp2) 
-        self.quot_op = str(tmp1 / tmp2)
+        tmp1, tmp2 = self.makePred()
+        self.sumOperation = str(tmp1 + tmp2)
+        self.diffOperation = str(tmp1 - tmp2)
+        self.prodOperation = str(tmp1 * tmp2) 
+        self.quotOperation = str(tmp1 / tmp2)
 
     # pushes operations to text label
     def addOp(self):
-        self.label_2.setText(self.sum_op)
+        self.answerLabel.setText(self.sumOperation)
 
     def subtrOp(self):
-        self.label_2.setText(self.diff_op)
+        self.answerLabel.setText(self.diffOperation)
 
     def multOp(self):
-        self.label_2.setText(self.prod_op)
+        self.answerLabel.setText(self.prodOperation)
 
     def divOp(self):
-        self.label_2.setText(self.quot_op)
+        self.answerLabel.setText(self.quotOperation)
 
-    # changes windows tiltle names
-    def retranslateUi(self, MainWindow):
-        _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "SketchMath"))
-        self.paintButton.setText(_translate("MainWindow", "PUSH"))
-        self.addButton.setText(_translate("MainWindow", "+"))
-        self.subtrButton.setText(_translate("MainWindow", "-"))
-        self.multButton.setText(_translate("MainWindow", "*"))
-        self.divButton.setText(_translate("MainWindow", "/"))
-        self.translateButton.setText(_translate("MainWindow", "Translate"))
+    def stringToInt(self, inputString):
+        newInt = int(''.join(str(i) for i in inputString))
+        return newInt
+
+    # operation for making predication of digits, pulls in digitrec.py
+    def makePred(self):
+        global model
+        num1 = []
+        num2 = []
+        
+        firstImage = imageGray('./test1.png')
+        readOne = readNums(firstImage)
+        for digit in readOne:
+            prediction1 = model.predict(digit.reshape(1, 28, 28, 1))    
+            num1.append(np.argmax(prediction1))
+        
+        secondImage = imageGray('./test2.png')
+        readTwo = readNums(secondImage)
+        for digit in readTwo:
+            prediction2 = model.predict(digit.reshape(1, 28, 28, 1))    
+            num2.append(np.argmax(prediction2))
+
+        firstNum = self.stringToInt(num1)
+        secondNum = self.stringToInt(num2)
+        return firstNum, secondNum
 
 
-
-# non member
-def stringToInt(l):
-    final = int(''.join(str(i) for i in l))
-    return final
-
-# operation for making predication of digits, pulls in digitrec.py
-def makePred():
-    num1 = []
-    num2 = []
-    model = Compiler()
+global model
+class CompileThread(QtCore.QThread):
+    def __init__(self):
+        QtCore.QThread.__init__(self)
     
-    final_image1 = imageGray('./test1.png')
-    test1 = readNums(final_image1)
-    for digit in test1:
-        prediction1 = model.predict(digit.reshape(1, 28, 28, 1))    
-        num1.append(np.argmax(prediction1))
-    final_image2 = imageGray('./test2.png')
-    test2 = readNums(final_image2)
-    for digit in test2:
-        prediction2 = model.predict(digit.reshape(1, 28, 28, 1))    
-        num2.append(np.argmax(prediction2))
-    firstnum = stringToInt(num1)
-    secondnum = stringToInt(num2)
-    return firstnum, secondnum
+    def run(self):
+        global model
+        model = Compiler()

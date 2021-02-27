@@ -4,9 +4,9 @@ from PyQt5.QtGui import *
 from PyQt5.QtCore import * 
 import sys, os
   
-class Second(QMainWindow): 
+class Paint(QMainWindow): 
     def __init__(self): 
-        super(Second, self).__init__()
+        super(Paint, self).__init__()
         self.windowSetup()
         self.menuOptionsSetup()
         self.saveCommmandSetup()
