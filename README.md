@@ -31,10 +31,10 @@
 This was a personal project I embarked on. The idea came from the desire to test out deep learning. Inspiration for the digit recogintion was from various sources. It was a lot of fun to make and hope yall like it. :) 
 
 ### Features
-* Offers the fully integrated QuickPaint software (self made drawing application)
-* Creates a Nueral network and performs deep learning handwriting recognition of user drawn digits.
+* Uses TensorFlow for training reconigition data & OpenCV for reformatting written digit for comparison.
 * Utilizes MNIST digit classification
 * Can perform and output mathematical computations on 2 user drawn numbers.
+* Offers the fully integrated QuickPaint software (self made drawing application)
 
 ![Product Name Screen Shot][product-screenshot2]
 
