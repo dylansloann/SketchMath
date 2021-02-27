@@ -1,4 +1,3 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
 from digitrec import *
 from QuickPaint import *
 
