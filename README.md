@@ -7,8 +7,8 @@
 
   <h3 align="center">SketchMath</h3>
 
-  <p align="center">
-     A photomath alternative.
+  <!-- <p align="center">
+     A photomath alternative. -->
 
 
 <!-- TABLE OF CONTENTS -->
@@ -28,7 +28,7 @@
 
 ![Product Name Screen Shot][product-screenshot]
 
-This was a personal project I embarked on. The idea came from the desire to test out deep learning. Inspiration for the digit recogintion was from various sources. It was a lot of fun to make and hope yall like it. :) 
+This was a personal project I embarked on. The idea came from the desire to test out deep learning. Inspiration for the digit recogintion came from various sources.
 
 ### Features
 * Uses TensorFlow for training reconigition data & OpenCV for reformatting written digit for comparison.
