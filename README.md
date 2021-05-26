@@ -64,14 +64,14 @@ git clone https://github.com/dylansloann/SketchMath
 3. Run main.py
 
 
-<!-- CONTACT -->
+<!-- CONTACT
 ## Contact
 
 Name - Dylan Sloan (TAMU '23)
 
 Email - dylansloann2@gmail.com
 
-Project Link: [https://github.com/dylansloann/SketchMath](https://github.com/dylansloann/SketchMath)
+Project Link: [https://github.com/dylansloann/SketchMath](https://github.com/dylansloann/SketchMath) -->
 
 [product-screenshot]: assets/showcase3.png
 [product-screenshot2]: assets/showcase4.png
