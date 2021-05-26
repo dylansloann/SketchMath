@@ -19,7 +19,6 @@ class MainGUI(QtWidgets.QWidget):
         self.subtractionButtonSetup()
         self.multiplciationButtonSetup()
         self.divisionButtonSetup()
-        self.translateButtonSetup()
         self.show()
 
         self.compile = CompileThread()
@@ -27,16 +26,16 @@ class MainGUI(QtWidgets.QWidget):
 
     def backgroundSetup(self):
         self.backgroundImage = QtWidgets.QLabel(self)
-        self.backgroundImage.setGeometry(QtCore.QRect(0, 0, 631, 401))
+        self.backgroundImage.setGeometry(QtCore.QRect(0, 0, 626, 417))
         self.backgroundImage.setText("")
-        self.backgroundImage.setPixmap(QtGui.QPixmap("background.png"))
+        self.backgroundImage.setPixmap(QtGui.QPixmap("background2.png"))
         self.backgroundImage.setObjectName("backgroundImage")
 
     def tmpSetup(self):
         self.answerLabel = QtWidgets.QLabel(self)
-        self.answerLabel.setGeometry(QtCore.QRect(280, 190, 61, 20))
+        self.answerLabel.setGeometry(QtCore.QRect(280, 197, 61, 20))
         font = QtGui.QFont()
-        font.setFamily("Beckman")
+        font.setFamily("Sicret Mono PERSONAL")
         font.setPointSize(11)
         self.answerLabel.setFont(font)
         self.answerLabel.setStyleSheet("Color : white")
@@ -45,10 +44,10 @@ class MainGUI(QtWidgets.QWidget):
 
     def paintButtonSetup(self):
         self.paintButton = QtWidgets.QPushButton(self)
-        self.paintButton.setGeometry(QtCore.QRect(120, 250, 101, 61))
+        self.paintButton.setGeometry(QtCore.QRect(125, 235, 95, 61))
         font = QtGui.QFont()
-        font.setFamily("Jokerman")
-        font.setPointSize(12)
+        font.setFamily("Sicret Mono PERSONAL")
+        font.setPointSize(17)
         self.paintButton.setFont(font)
         self.paintButton.setAutoFillBackground(False)
         self.paintButton.setObjectName("paintButton")
@@ -58,7 +57,7 @@ class MainGUI(QtWidgets.QWidget):
 
     def addButtonSetup(self):
         self.addButton = QtWidgets.QPushButton(self)
-        self.addButton.setGeometry(QtCore.QRect(415, 250, 41, 31))
+        self.addButton.setGeometry(QtCore.QRect(419, 235, 35, 25))
         font = QtGui.QFont()
         font.setFamily("Beckman Free")
         font.setPointSize(14)
@@ -69,7 +68,7 @@ class MainGUI(QtWidgets.QWidget):
 
     def subtractionButtonSetup(self):
         self.subtrButton = QtWidgets.QPushButton(self)
-        self.subtrButton.setGeometry(QtCore.QRect(465, 250, 41, 31))
+        self.subtrButton.setGeometry(QtCore.QRect(465, 235, 35, 25))
         font = QtGui.QFont()
         font.setFamily("Beckman Free")
         font.setPointSize(16)
@@ -80,7 +79,7 @@ class MainGUI(QtWidgets.QWidget):
 
     def multiplciationButtonSetup(self):
         self.multButton = QtWidgets.QPushButton(self)
-        self.multButton.setGeometry(QtCore.QRect(415, 285, 41, 31))
+        self.multButton.setGeometry(QtCore.QRect(419, 270, 35, 25))
         font = QtGui.QFont()
         font.setFamily("Beckman Free")
         font.setPointSize(16)
@@ -91,52 +90,37 @@ class MainGUI(QtWidgets.QWidget):
 
     def divisionButtonSetup(self):
         self.divButton = QtWidgets.QPushButton(self)
-        self.divButton.setGeometry(QtCore.QRect(465, 285, 41, 31))
+        self.divButton.setGeometry(QtCore.QRect(465, 270, 35, 25))
         font = QtGui.QFont()
-        font.setFamily("Beckman")
+        font.setFamily("Beckman Free")
         font.setPointSize(16)
         self.divButton.setFont(font)
         self.divButton.setObjectName("divButton")
         self.divButton.setText("/")
         self.divButton.clicked.connect(self.divOp)
 
-    def translateButtonSetup(self):
-        self.translateButton = QtWidgets.QPushButton(self)
-        self.translateButton.setGeometry(QtCore.QRect(280, 270, 61, 20))
-        font = QtGui.QFont()
-        font.setFamily("Beckman Free")
-        font.setPointSize(7)
-        self.translateButton.setFont(font)
-        self.translateButton.setStyleSheet("color: white; background-color: transparent")
-        self.translateButton.setObjectName("translateButton")
-        self.translateButton.setText("Translate")
-        self.translateButton.clicked.connect(self.translateOp)
 
     # defines paint button operations, redirects to QuickPaint.py
     def openPaint(self):
         self.sub = Paint()
         self.sub.show()
 
-    # defines translate operation, computes 4 answers
-    def translateOp(self):
-        tmp1, tmp2 = self.makePred()
-        self.sumOperation = str(tmp1 + tmp2)
-        self.diffOperation = str(tmp1 - tmp2)
-        self.prodOperation = str(tmp1 * tmp2) 
-        self.quotOperation = str(tmp1 / tmp2)
-
     # pushes operations to text label
     def addOp(self):
-        self.answerLabel.setText(self.sumOperation)
+        tmp1, tmp2 = self.makePred()
+        self.answerLabel.setText(str(tmp1 + tmp2))
 
     def subtrOp(self):
-        self.answerLabel.setText(self.diffOperation)
+        tmp1, tmp2 = self.makePred()
+        self.answerLabel.setText(str(tmp1 - tmp2))
 
     def multOp(self):
-        self.answerLabel.setText(self.prodOperation)
+        tmp1, tmp2 = self.makePred()
+        self.answerLabel.setText(str(tmp1 * tmp2))
 
     def divOp(self):
-        self.answerLabel.setText(self.quotOperation)
+        tmp1, tmp2 = self.makePred()
+        self.answerLabel.setText(str(tmp1 / tmp2))
 
     def stringToInt(self, inputString):
         newInt = int(''.join(str(i) for i in inputString))

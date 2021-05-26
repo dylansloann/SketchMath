@@ -16,7 +16,7 @@ class Paint(QtWidgets.QMainWindow):
         self.setGeometry(100, 100, 500, 500)
         self.setWindowIcon(QtGui.QIcon("./icons/painticon.png"))
         self.image = QtGui.QImage(self.size(), QtGui.QImage.Format_RGB32)
-        self.image.fill(QtCore.Qt.gray)
+        self.image.fill(QtCore.Qt.white)
         
         # default brush
         self.brushSize = 2
@@ -54,7 +54,7 @@ class Paint(QtWidgets.QMainWindow):
         self.image.save(file_path[0]) 
   
     def erase(self):  
-        self.image.fill(QtCore.Qt.gray) 
+        self.image.fill(QtCore.Qt.white) 
         self.update() 
 
     def colorsSetup(self):
