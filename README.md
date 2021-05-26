@@ -40,13 +40,11 @@ This was a personal project I embarked on. The idea came from the desire to test
 
 ### Built With
 This includes the main languages/modules that were used.
-* [Python](https://jquery.com)
 * [PyQt5](https://pypi.org/project/PyQt5/)
 * [Tensorflow](https://www.tensorflow.org/)
 * [OpenCV](https://pypi.org/project/opencv-python/)
-* [NumPy](https://numpy.org/)
 
-
+G
 
 <!-- GETTING STARTED -->
 ## Getting Started
