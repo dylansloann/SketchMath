@@ -44,7 +44,7 @@ This includes the main languages/modules that were used.
 * [Tensorflow](https://www.tensorflow.org/)
 * [OpenCV](https://pypi.org/project/opencv-python/)
 
-G
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
