@@ -75,5 +75,5 @@ Email - dylansloann2@gmail.com
 
 Project Link: [https://github.com/dylansloann/SketchMath](https://github.com/dylansloann/SketchMath)
 
-[product-screenshot]: images/showcase3.png
-[product-screenshot2]: images/showcase4.png
+[product-screenshot]: assets/showcase3.png
+[product-screenshot2]: assets/showcase4.png
