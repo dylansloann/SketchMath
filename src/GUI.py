@@ -27,6 +27,7 @@ class MainGUI(QtWidgets.QWidget):
     def backgroundSetup(self):
         self.backgroundImage = QtWidgets.QLabel(self)
         self.backgroundImage.setGeometry(QtCore.QRect(0, 0, 626, 417))
+        self.setFixedSize(626, 417)
         self.backgroundImage.setText("")
         self.backgroundImage.setPixmap(QtGui.QPixmap("background2.png"))
         self.backgroundImage.setObjectName("backgroundImage")

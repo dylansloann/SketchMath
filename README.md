@@ -53,25 +53,18 @@ Info on if you want to give it a shot.
 
 ### Running/Installation
 
-To test out program follow steps
-
 1. Clone the repo
 ```sh
 git clone https://github.com/dylansloann/SketchMath
 ```
-2. Install modules in Built With
-
+2. Install modules
+```sh
+pip install -r requirements.txt
+```
 3. Run main.py
-
-
-<!-- CONTACT
-## Contact
-
-Name - Dylan Sloan (TAMU '23)
-
-Email - dylansloann2@gmail.com
-
-Project Link: [https://github.com/dylansloann/SketchMath](https://github.com/dylansloann/SketchMath) -->
+```sh
+python src/main.py
+```
 
 [product-screenshot]: assets/showcase3.png
 [product-screenshot2]: assets/showcase4.png

@@ -14,6 +14,7 @@ class Paint(QtWidgets.QMainWindow):
     def windowSetup(self):
         self.setWindowTitle("QuickPaint") 
         self.setGeometry(100, 100, 500, 500)
+        self.setFixedSize(500, 500)
         self.setWindowIcon(QtGui.QIcon("./icons/painticon.png"))
         self.image = QtGui.QImage(self.size(), QtGui.QImage.Format_RGB32)
         self.image.fill(QtCore.Qt.white)
